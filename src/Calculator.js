@@ -43,7 +43,11 @@ const Calculator = () => {
     if (key === "AC") {
       setScreen("0");
     } else if (key === "C") {
-      setScreen(screen.slice(0, screen.length - 1));
+      if (screen.length === 1) {
+        setScreen("0");
+      } else {
+        setScreen(screen.slice(0, screen.length - 1));
+      }
     } else if (key === "=") {
       var res = calculate(screen);
       setScreen(res);
