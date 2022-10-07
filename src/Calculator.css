@@ -4,7 +4,7 @@
     position: absolute;
     background-color: #0f0a36;
     border: 1px solid rgb(153, 153, 153);
-    top:3rem;
+    top:0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -52,5 +52,5 @@
 }
 .equal_button{
     font-weight: 600;
-    color: rgb(0, 255, 0);
+    color: rgb(255, 145, 0);
 }
