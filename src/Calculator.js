@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Calculator.css";
 
 const Calculator = () => {
-  const [screen, setScreen] = useState("");
+  const [screen, setScreen] = useState("0");
 
   const calculate = (string) => {
     let firstValue = "";
@@ -39,15 +39,20 @@ const Calculator = () => {
 
   const handleClick = (event) => {
     var key = event.target.value;
+
     if (key === "AC") {
-      setScreen("");
+      setScreen("0");
     } else if (key === "C") {
       setScreen(screen.slice(0, screen.length - 1));
     } else if (key === "=") {
       var res = calculate(screen);
       setScreen(res);
     } else {
-      setScreen(screen + key);
+      if (screen === "0") {
+        setScreen(key);
+      } else {
+        setScreen(screen + key);
+      }
     }
   };
 
