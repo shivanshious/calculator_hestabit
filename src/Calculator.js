@@ -52,8 +52,8 @@ const Calculator = () => {
       var res = calculate(screen);
       setScreen(res);
     } else {
-      if (screen === "0") {
-        setScreen(key);
+      if (screen === "0" || screen==="00") {
+        setScreen('0');
       } else {
         setScreen(screen + key);
       }
